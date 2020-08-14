@@ -9,7 +9,7 @@
   </a>
 </template>
 <script lang="ts">
-import { Component, Watch, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class DarkThemeSwitcher extends Vue {

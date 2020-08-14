@@ -1,0 +1,12 @@
+.app-background {
+  background-color: var(--app-background-color);
+}
+a {
+  &.theme-switch {
+    cursor: pointer;
+    float: right !important;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

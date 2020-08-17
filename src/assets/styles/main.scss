@@ -1,15 +1,18 @@
+//themes
+@import "themes/theme";
+@import "themes/theme-dark";
 //base
 @import "base/normalize";
-@import "base/typography";
 @import "base/variables";
+@import "base/typography";
 //components
+@import "components/button";
+@import "components/svg-icon";
 @import "components/theme-switcher";
 //layout
 @import "layout/master";
 @import "layout/navgation";
 //pages
 @import "pages/home";
-//themes
-@import "themes/theme";
-@import "themes/theme-dark";
+
 //vendors

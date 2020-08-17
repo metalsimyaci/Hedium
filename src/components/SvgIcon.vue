@@ -25,7 +25,7 @@ export default class SvgIcon extends Vue {
     return "#icon-" + this.iconClass;
   }
   get svgClass(): string {
-    return this.className ? "svg-icon" + this.className : "svg-icon";
+    return this.className ? "svg-icon " + this.className : "svg-icon";
   }
   get styleExternalIcon() {
     return {

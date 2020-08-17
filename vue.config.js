@@ -1,13 +1,11 @@
 'use strict'
 const path = require('path')
-const defaultSettings = require('./src/settings.js')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'Hedium' 
-
+const name = 'Hedium' 
 const port = process.env.port || process.env.npm_config_port || 9527 // dev port
 
 module.exports = {

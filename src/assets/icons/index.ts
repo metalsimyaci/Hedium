@@ -1,9 +1,10 @@
 const req = require.context('./svg', false, /\.svg$/,"lazy") 
-console.warn("hasan");
-console.log(req);
-const requireAll = (requireContext) => {
+/* eslint-disable */
+
+const requireAll = (requireContext: any) => {
     console.log(requireContext);
     return requireContext.keys().map(requireContext);
 };
+/* eslint-disable */
 requireAll(req)
 export default{}

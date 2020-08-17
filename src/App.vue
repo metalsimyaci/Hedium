@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <div style="color:red">
-      <svg-icon icon-class="bug" class-name="bug" />
-    </div>
-    <div id="nav" class="metabar">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-      <DarkThemeSwitcher />
-    </div>
-    <router-view />
+    <v-app>
+      <v-theme-provider>
+        <!-- <v-navigation-drawer app></v-navigation-drawer> -->
+        <v-app-bar app fixed>
+           <v-app-bar-nav-icon></v-app-bar-nav-icon>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
+          <DarkThemeSwitcher />
+        </v-app-bar>
+        <v-main>
+          <v-container fluid>
+            <router-view></router-view>
+          </v-container>
+        </v-main>
+        <v-footer app>
+          <!-- -->
+        </v-footer>
+      </v-theme-provider>
+    </v-app>
   </div>
 </template>
 <script lang="ts">
@@ -21,10 +31,3 @@ import DarkThemeSwitcher from "@/components/DarkThemeSwitcher.vue";
 })
 export default class App extends Vue {}
 </script>
-<style lang="scss" scoped>
-.bug{
-  color:aqua;
-  width: 40px;
-  height: 40px;
-}
-</style>

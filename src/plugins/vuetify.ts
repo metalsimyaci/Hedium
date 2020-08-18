@@ -29,6 +29,7 @@ const opts = {
                 info: '#2196F3',
                 success: '#4CAF50',
                 warning: '#FB8C00',
+                highlighted:'#7DFFB3'
             },
             dark: {
                 primary: '#2196F3',
@@ -38,6 +39,7 @@ const opts = {
                 info: '#2196F3',
                 success: '#4CAF50',
                 warning: '#FB8C00',
+                highlighted: '#f69a22'
             },
         },
     },

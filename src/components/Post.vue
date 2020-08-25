@@ -25,6 +25,15 @@
       </v-btn>
       <v-btn text class="float-right" :href="link">Detay</v-btn>
     </v-card-actions>
+     <v-fade-transition>
+          <v-overlay
+            v-if="hover"
+            absolute
+            :color="$vuetify.theme.dark===false ? 'black':'white'"
+          >
+            <v-btn>See more info</v-btn>
+          </v-overlay>
+        </v-fade-transition>
   </v-card>
   </v-hover>
 </template>

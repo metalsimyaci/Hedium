@@ -39,8 +39,6 @@
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import tr from "vuetify/src/locale/tr";
-
 @Component
 export default class Post extends Vue {
   @Prop({ type: String, required: true }) title!: string;

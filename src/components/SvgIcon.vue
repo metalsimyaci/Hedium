@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { isExternal } from "@/Utils/validate";
+import { isExternal } from "@/utils/validate";
 import { Component,  Prop, Vue } from "vue-property-decorator";
 
 @Component

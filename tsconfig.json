@@ -14,7 +14,10 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "webpack",
+      "webpack-env",
+      "vuetify"
     ],
     "paths": {
       "@/*": [
@@ -33,7 +36,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", 
+    "tests/**/*.tsx",
     "src/assets/icons/index.ts"
   ],
   "exclude": [

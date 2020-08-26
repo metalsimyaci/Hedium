@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
+import Vuetify from 'vuetify/lib';
 import tr from 'vuetify/src/locale/tr';
-
+import en from 'vuetify/src/locale/en';
 Vue.use(Vuetify);
 
 const opts = {
@@ -16,8 +16,8 @@ const opts = {
             minifyTheme: undefined,
             themeCache: {
                 get: (key: any) => localStorage.getItem(key),
-                set: (key: any , value: any) => localStorage.setItem(key, value),
-              },
+                set: (key: any, value: any) => localStorage.setItem(key, value),
+            },
         },
         themes: {
             light: {
@@ -28,7 +28,7 @@ const opts = {
                 info: '#2196F3',
                 success: '#4CAF50',
                 warning: '#FB8C00',
-                highlighted:'#7DFFB3'
+                highlighted: '#7DFFB3'
             },
             dark: {
                 primary: '#2196F3',
@@ -43,8 +43,8 @@ const opts = {
         },
     },
     lang: {
-        locales: { tr },
-        current: 'tr',
+        locales: { tr, en },
+        current: 'tr',        
     },
 }
 

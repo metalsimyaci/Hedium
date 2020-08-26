@@ -14,6 +14,11 @@ module.exports = {
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
+
+  devServer: {
+    port: port,
+  },
+
   configureWebpack: {
     name: name,
     resolve: {
@@ -22,6 +27,7 @@ module.exports = {
       }
     }
   },
+
   chainWebpack(config) {
     // set svg-sprite-loader
     config.module
@@ -39,5 +45,14 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'tr',
+      fallbackLocale: 'tr',
+      localeDir: 'locales',
+      enableInSFC: true
+    }
   }
 }

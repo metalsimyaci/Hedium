@@ -11,9 +11,9 @@ export default class PostModel {
     
     key: string;
     title: string;
-    subtitle: string = "";
-    content: string = "";
-    readCount: number = 0;
+    subtitle = "";
+    content = "";
+    readCount = 0;
     createDate: string;
-    link: string = "";
+    link = "";
 }

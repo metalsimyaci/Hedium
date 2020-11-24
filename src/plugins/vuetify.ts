@@ -1,9 +1,35 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
+import VueI18n from 'vue-i18n'
 import tr from 'vuetify/src/locale/tr';
 import en from 'vuetify/src/locale/en';
 import { VuetifyPreset } from 'vuetify/types/services/presets'
 Vue.use(Vuetify);
+Vue.use(VueI18n);
+const messages = {
+  en: {
+    $vuetify: {
+      dataIterator: {
+        rowsPerPageText: 'Items per page:',
+        pageText: '{0}-{1} of {2}',
+      },
+    },
+  },
+  tr: {
+    $vuetify: {
+      dataIterator: {
+        rowsPerPageText: 'Element per sida:',
+        pageText: '{0}-{1} av {2}',
+      },
+    },
+  },
+}
+
+const i18n = new VueI18n({
+  locale: 'tr', // set locale
+  messages, // set locale messages
+  silentTranslationWarn: true
+})
 export const preset: VuetifyPreset = {
     breakpoint: {
       mobileBreakpoint:"sm",
@@ -20,9 +46,9 @@ export const preset: VuetifyPreset = {
       values: {},
     },
     lang: {
-      current: 'en',
-      locales: { en },
-      t: undefined as any,
+      current: 'tr',
+      locales: { tr },
+      t: (key, ...params) => i18n.t(key, params) as string,
     },
     rtl: false,
     theme: {
@@ -97,7 +123,7 @@ const opts = {
     },
     lang: {
         locales: { tr, en },
-        current: 'tr',        
+        current: 'tr' 
     },
 }
 

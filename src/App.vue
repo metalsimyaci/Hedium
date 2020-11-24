@@ -4,13 +4,14 @@
       <v-app>
         <v-navigation-drawer
           v-model="drawer"
-          temporary          
+          temporary       
+          :width="$vuetify.breakpoint.mobile==true?'90%':'50%'"   
           :color="$vuetify.theme.dark===false ? 'white':'black'"             
           :src="$vuetify.theme.dark===false ?require('@/assets/Dragon_Banner.svg'):require('@/assets/Dragon_Banner_dark.svg')"
           app
         >
           <v-container
-            class="d-flex pa-8 mt-10 justify-center flex-column align-center align-content-center"
+            class="d-flex half-width pa-8 mt-10 justify-center flex-column align-center align-content-center"
           >
             <v-avatar>
               <v-img :src="require('@/assets/logo.svg')" alt="Hasan URAL"></v-img>
@@ -28,7 +29,7 @@
               <v-btn text to="/About">Hakkımda</v-btn>
             </v-container>
             <v-container class="d-flex align-center justify-space-around">
-              <v-btn fab>
+              <v-btn fab href="https://twitter.com/metalsimyaci">
                 <v-icon large>mdi-twitter</v-icon>
               </v-btn>
               <v-btn fab>

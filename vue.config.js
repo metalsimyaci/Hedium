@@ -47,12 +47,12 @@ module.exports = {
       .end()
   },
 
-  pluginOptions: {
-    i18n: {
-      locale: 'tr',
-      fallbackLocale: 'tr',
-      localeDir: 'locales',
-      enableInSFC: true
-    }
-  }
+  // pluginOptions: {
+  //   i18n: {
+  //     locale: 'tr',
+  //     fallbackLocale: 'tr',
+  //     localeDir: 'locales',
+  //     enableInSFC: true
+  //   }
+  // }
 }
